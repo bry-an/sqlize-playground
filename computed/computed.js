@@ -1,5 +1,4 @@
 let moment = require('moment-timezone');
-moment.tz('Z');
 
 let computed = {
     week: function () {
@@ -39,11 +38,21 @@ let computed = {
     },
     getAvailable: function(hours) {
         let dayOne = hours[0];
-        let open = dayOne.open;
-        let close = dayOne.close;
-        console.log("OPEN", moment.tz(open));
+        let open = moment.tz(dayOne.open, 'utc');
+        let close = moment.tz(dayOne.close, 'utf');
+        let timeslot = open;
+        let timeslotArr = [];
+        // console.log('HOURS', open, close)
+        // console.log('add', timeslot.add(30, 'm'))
+
+        while (timeslot.isBefore(close)) {
+            let currentTimeSlot = timeslot;
+            timeslotArr.push(currentTimeSlot);
+            timeslot.add(30, 'm')
+        }
+
+        console.log('timeslotarr', timeslotArr)
     }
 }
 
-computed.week();
 module.exports = computed;
