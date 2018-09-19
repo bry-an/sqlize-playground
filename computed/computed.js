@@ -71,7 +71,7 @@ let computed = {
                     timeStart.isSame(eventStart)) {
                     console.log('conflict!', timeStart, index)
                 }
-                else availableTimes.push(moment(timeStart).format('dddd, MMMM Do, h:mm a'));
+                else availableTimes.push(moment(timeStart));
             })
         })
         return availableTimes;
