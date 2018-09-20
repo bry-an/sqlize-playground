@@ -18,6 +18,7 @@ app.set('view engine', 'handlebars');
 //require routes
 require('./routes/service-api-routes')(app);
 require('./routes/customer-api-routes')(app);
+require('./routes/client-api-routes')(app);
 
 db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {

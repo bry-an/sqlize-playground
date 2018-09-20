@@ -1,6 +1,10 @@
 let store = {
     state: {
     timeslots: [],
+    day: [
+        "08:00", "08"
+
+    ],
     week: []
     },
     mutations: {

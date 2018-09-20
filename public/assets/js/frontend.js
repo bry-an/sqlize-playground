@@ -68,6 +68,27 @@ $(function () {
         })
     })
 
+    $('#set-hours').on('click', function() {
+        $.get('/set-hours');
+    })
+
+    $('#add-service').on('click', function() {
+        $.get('add-service');
+    })
+
+    $('#add-service-button').on('click', function() {
+        let svcName = $('#add-service-name').val().trim();
+        let svcDur = $('#add-service-duration').val().trim();
+        let maxSimul = $('#add-service-number').val().trim();
+        let serviceData = {
+            svcName, 
+            svcDur, 
+            maxSimul
+        }
+
+        $.post('clientaddservice', serviceData);
+    });
+
     function postCustomer (name, phone, comment) {
         let userData = {
             name, 
