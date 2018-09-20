@@ -1,3 +1,9 @@
+.container {
+    width: 90%;
+}
+
+/* jquery datepicker style */
+
 .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
@@ -128,6 +134,62 @@
 	font-size: 0;
 }
 
+/* end jQuery datepicker style */
+
 ul {
     list-style: none;
+}
+
+.service-select {
+    min-width: 200px;
+}
+.service-select:focus {
+    background-color: lightblue;
+}
+
+#submit-date {
+    margin-left: 10px;
+}
+
+#service {
+    float: left;
+    padding-right: 30px;
+}
+
+#user-select {
+    display: block;
+}
+
+.time-select {
+    min-width: 200px;
+}
+
+.time-select:focus {
+    background-color: lightblue;
+}
+
+#available-times p {
+    font-weight: bold;
+}
+
+.input-info {
+    text-align: center;
+}
+.customer-input-field {
+    width: 90%;
+}
+
+.input-reminder {
+    margin-bottom: 10px;
+}
+
+#customer-input {
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 30px;
+}
+
+#submit-input {
+    width: 200px;
+    margin-right: 20px;
 }

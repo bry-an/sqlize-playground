@@ -1,6 +1,7 @@
 let store = {
     state: {
     timeslots: [],
+    week: []
     },
     mutations: {
         setTimeslots(payload) {
@@ -9,8 +10,11 @@ let store = {
         }, 
         removeTimes(index) {
             store.state.timeslots[0].splice(index, 1);
-
+        }, 
+        addWeek (payload) {
+            store.state.week.push(payload);
         }
+
     },
     getters: {
         getTimeslots() {
